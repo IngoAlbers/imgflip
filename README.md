@@ -20,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+For a list of `template_ids` visit: https://api.imgflip.com/popular_meme_ids
+
 ```ruby
 Imgflip.generate_meme(template_id, text0, text1)
 ```
