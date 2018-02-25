@@ -1,6 +1,6 @@
 # Imgflip
 
-Access the imgflip Meme Generator API to generate your own spicy memes.
+Access the imgflip [Meme Generator API](https://api.imgflip.com/) to generate your own spicy memes.
 
 ## Installation
 
@@ -18,12 +18,22 @@ Or install it yourself as:
 
     $ gem install imgflip
 
+If you are going to make a lot of requests you will need to make your own imgflip account and set the environment variables `IMGFLIP_USERNAME` and `IMGFLIP_PASSWORD`.
+
 ## Usage
 
-For a list of `template_ids` visit: https://api.imgflip.com/popular_meme_ids
+To return an array of the most popular memes with template_ids and name run:
 
 ```ruby
-Imgflip.generate_meme(template_id, text0, text1)
+Imgflip.get_memes
+```
+
+For a list of `template_ids` you can also visit: https://api.imgflip.com/popular_meme_ids
+
+To generate a meme and get the url run:
+
+```ruby
+Imgflip.caption_image(template_id, text0, text1)
 ```
 
 ## Development
